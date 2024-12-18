@@ -64,7 +64,6 @@ return {
 		mason_tool_installer.setup({
 			ensure_installed = {
 				"ast-grep",
-				"commitlint",
 				"csharpier",
 				"eslint_d",
 				"google-java-format",

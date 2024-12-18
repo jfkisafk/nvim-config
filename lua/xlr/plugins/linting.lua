@@ -6,15 +6,15 @@ return {
 
 		lint.linters_by_ft = {
 			go = { "golangci-lint" },
-			javascript = { "eslint_d", "commitlint" },
-			javascriptreact = { "eslint_d", "commitlint" },
+			javascript = { "eslint_d" },
+			javascriptreact = { "eslint_d" },
 			kotlin = { "ktlint" },
 			markdown = { "eslint_d", "markdownlint" },
 			python = { "pylint" },
 			rust = { "rstcheck" },
-			svelte = { "eslint_d", "commitlint" },
-			typescript = { "eslint_d", "commitlint" },
-			typescriptreact = { "eslint_d", "commitlint" },
+			svelte = { "eslint_d" },
+			typescript = { "eslint_d" },
+			typescriptreact = { "eslint_d" },
 		}
 
 		local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
