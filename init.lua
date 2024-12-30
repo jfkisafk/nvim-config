@@ -1,2 +1,2 @@
-require("xlr.core")
-require("xlr.lazy")
+require("neo.core")
+require("neo.lazy")
