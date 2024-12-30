@@ -63,7 +63,6 @@ return {
 
 		mason_tool_installer.setup({
 			ensure_installed = {
-				"ast-grep",
 				"csharpier",
 				"eslint_d",
 				"google-java-format",

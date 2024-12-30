@@ -10,7 +10,8 @@ return {
 		local treesitter = require("nvim-treesitter.configs")
 
 		-- configure treesitter
-		treesitter.setup({ -- enable syntax highlighting
+		treesitter.setup({
+			-- enable syntax highlighting
 			highlight = {
 				enable = true,
 			},
@@ -20,6 +21,8 @@ return {
 			autotag = {
 				enable = true,
 			},
+			auto_install = true,
+			sync_install = true,
 			-- ensure these language parsers are installed
 			ensure_installed = {
 				"astro",
