@@ -4,11 +4,12 @@ return {
   dependencies = {
     "hrsh7th/cmp-nvim-lsp",
     { "antosha417/nvim-lsp-file-operations", config = true },
-    { "folke/neodev.nvim", opts = {} },
+    { "folke/neodev.nvim",                   opts = {} },
   },
   config = function()
     -- import lspconfig plugin
     local lspconfig = require("lspconfig")
+    local util = require("lspconfig/util")
 
     -- import mason_lspconfig plugin
     local mason_lspconfig = require("mason-lspconfig")
@@ -89,6 +90,20 @@ return {
         lspconfig["graphql"].setup({
           capabilities = capabilities,
           filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
+        })
+      end,
+      ["rust_analyzer"] = function()
+        lspconfig["rust_analyzer"].setup({
+          capabilities = capabilities,
+          filetypes = { "rust" },
+          root_dir = util.root_pattern("Cargo.toml"),
+          settings = {
+            ["rust-analyzer"] = {
+              cargo = {
+                allFeatures = true,
+              },
+            },
+          },
         })
       end,
       ["lua_ls"] = function()
