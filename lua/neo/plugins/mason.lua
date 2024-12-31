@@ -63,6 +63,22 @@ return {
 
 		mason_tool_installer.setup({
 			ensure_installed = {
+				"biome",
+				"black",
+				"csharpier",
+				"gofumpt",
+				"goimports",
+				"golines",
+				"google-java-format",
+				"isort",
+				"ktlint",
+				"markdownlint",
+				"mdformat",
+				"prettier",
+				"rustywind",
+				"stylua",
+				"yamlfmt",
+
 				"gitlint",
 				"hadolint",
 				"ktlint",
